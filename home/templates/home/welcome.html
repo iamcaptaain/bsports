@@ -1,0 +1,554 @@
+{% load static %}
+<!--
+=========================================================
+* * Black Dashboard - v1.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/black-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+  <title>
+   A.T.O.M.
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="{% static 'css/black-dashboard.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{% static 'demo/demo.css' %}" rel="stylesheet" />
+  <style type="text/css">
+    html{
+      overflow-x: hidden;
+    }
+
+* {
+  box-sizing: border-box;
+}
+
+label{
+  margin-top: 5px;
+}
+
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+.bg{
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/ball3.jpg');background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;
+}
+
+.header-logo{
+  padding: 2em;
+}
+.main-logo{
+  box-sizing: border-box;
+}
+.heading{
+  font-size: 6vh;
+  text-align: left;
+  color: #FBC403;
+  vertical-align: middle;
+}
+.bslogo{
+  width: 12vh;
+}
+ul li{
+  list-style: none;
+}
+
+.contain .tile:hover{
+  box-shadow: 35px 35px 35px black;
+  color: #FFDD03;
+}
+.contain .tile{
+  box-shadow: 10px 10px 10px black;
+  background-color: #151515;
+  opacity: 0.9;
+  color: #D4AF37;
+  text-align: center;
+}
+.contain2 .tile{
+  box-shadow: 10px 10px 10px black;
+  background-color: #151515;
+  opacity: 0.9;
+  color: #D4AF37;
+  padding: 4%;
+  text-align: center;
+}
+.contain2 .tile:hover{
+  box-shadow: 35px 35px 35px black;
+  color: #FFDD03;
+}
+.contain{
+   margin: 0 auto;
+  width: 95%;
+}
+
+.contain2{
+  margin: 0 auto;
+  width: 50%;
+}
+.tileheading{
+  font-size: 1.4vw;
+}
+.tileheading3{
+  font-size: 1.2vw;
+}
+.tileheading2{
+  font-size: 1.2vw;
+}
+.botton{
+  width: 2vh;
+}
+.btn-lg2{
+  padding: 10px 40px;
+  font-size: 1em;
+  line-height: 1.35;
+  border-radius: 0.4285rem;
+}
+
+@media only screen and (max-width: 700px){
+  .contain{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .contain2 .tile{
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px){
+ .tileheading{
+  font-size: 2vw;
+}
+ .tileheading2{
+  font-size: 1.8vw;
+}
+.tileheading3{
+  font-size: 1.4vw;
+}
+}
+@media only screen and (max-width: 768px){
+ .tileheading{
+  font-size: 3vw;
+}
+ .tileheading2{
+  font-size: 2.4vw;
+}
+.tileheading3{
+  font-size:3.5vw;
+  
+}
+}
+
+
+
+.card-user .avatar2 {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #2b3553;
+  border-bottom-color: transparent;
+  background-color: transparent;
+  position: relative;
+  border-radius: 50%;
+}
+.action-button {
+  width: 100px;
+  background: black;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+.action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #000000;
+}
+.btn2 {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+</style>
+</head>
+
+<body class="bg">
+ <nav class="mt-1">
+   <ul>
+     <li>
+       <div>
+         <div class="main-logo">
+           <div class="b-logo"><img src = "{% static 'img/backmarker_logo.png' %}" class="bslogo" >
+             <span class="heading">A.T.O.M</span>
+            <span class="float-right mr-3"><a href="index.html" class="btn2 tileheading3 action-button" style="color:black;background-color: #D4AF37;border-color:#D4AF37;vertical-align: middle;margin-right:1.4vw;text-align: center;">Logout</a></span>
+           </div>
+         </div>
+       </div>
+     </li>
+   </ul>
+ </nav>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-xl-8 col-lg-7"style="margin-top: 8%" >
+    <div class="contain2" style="width: 70%">
+      <div class="row">
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 pb-xl-1 pb-lg-1 pb-md-1 pb-sm-1 pb-1">
+          <div class="row">
+            <div class="col-6 p-xl-1 p-lg-1 p-md-1 p-sm-1 p-1">
+              <a href="#">
+             <div class="card  tile" style="padding: 0;">
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                     <i class="fa fa-users" style="font-size: 9vh"></i>
+                      <h3 class="title  mt-xl-4 mt-lg-4 mt-md-3 mt-sm-2 mt-2 tileheading">SQUAD</h3> 
+                  </div>
+                </p></div>   
+              </div>
+            </a>
+            </div>
+            <div class="col-6 p-xl-1  p-lg-1 p-md-1 p-sm-1 p-1">
+            <a href="session">
+                <div class="card  tile" style="padding: 0;">
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                    
+                      <i class="fas fa-chart-bar " style="font-size: 9vh"></i>
+                      <h3 class="title mt-xl-4 mt-lg-4 mt-md-3 mt-sm-2 mt-2 tileheading">SESSIONS</h3> 
+                  </div>
+                </p></div>   
+              </div>
+            </a>    
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 p-xl-1  p-lg-1 p-md-1 p-sm-1 p-1">
+            <a href="#">
+               <div class="card  tile" style="padding: 0;">
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                   
+                     <i class="fa fa-adjust" style="font-size: 9vh"></i>
+                      <h3 class="title mt-xl-4 mt-lg-4 mt-md-3 mt-sm-2 mt-2 tileheading">COMPARISIONS</h3> 
+                  </div>
+                </p></div>   
+              </div>
+            </a>
+            </div>
+            <div class="col-6 p-xl-1 p-lg-1 p-md-1 p-sm-1 p-1">
+            <a href="#">
+               <div class="card  tile" style="padding: 0;">
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                    
+                      <i class="fa fa-cog " style="font-size: 9vh"></i>
+                      <h3 class="title mt-xl-4 mt-lg-4 mt-md-3 mt-sm-2 mt-2 tileheading">SETTINGS</h3> 
+                  </div>
+                </p></div>   
+              </div>
+            </a>    
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 p-xl-1  p-lg-1 p-md-1 p-sm-1 p-1">
+              <a href="#">
+              <div class="card tile" style="padding: 0;">
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                   
+                      <i class="fas fa-calendar-alt " style="font-size: 9vh"></i>
+                      <h3 class="title mt-xl-4 mt-lg-4 mt-md-3 mt-sm-2 mt-2 tileheading">CALENDAR</h3> 
+                  </div>
+                </p></div>   
+              </div>
+            </a>
+            </div>
+            
+          </div>
+        </div>
+       <div>
+         
+       </div>      
+        </div>
+      </div></div>
+    <div class="col-12 pt-5 pl-5 pr-5 col-lg-5 col-xl-4 col-md-12 col-sm-12" >
+    <div class="contain">
+   <form id="regForm" class="card card-user tile"  style="background-color:rgba(218, 165, 32, 0.6);" action="WelcomeScreen.html">
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab"> <div >
+              <div class="card-header" >
+                <h4 type="button" id="editBtn" class="float-right tileheading2" style="display: block;margin-top: 0px;color: #0A0A0A;" onclick="nextPrev(1)" >EDIT<i class="fas fa-pencil-alt ml-1 fa-lg"></i></h4>
+                   </div>
+                     <div class="card-body mt-2">
+                <p class="card-text">
+                  <div class="author">
+                      <i class="fas fa-user" style="font-size: 9vh;color: #0A0A0A"></i>
+                      <h1 class="title mt-4 mb-1 tileheading" style="color:#0A0A0A">KARAMVEER BAKSHI</h1>
+                    <h2 class="description tileheading" style="color:#0A0A0A">
+                      XYZ UNITED
+                    </h2>
+                  </div>
+                </p>
+                <div class="row pl-2 pr-2">
+                  <div class="col-12" style="margin-bottom: 0;padding-bottom: 0;">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="card tile p-3" style="color:#0A0A0A">
+                          <p class="title tileheading">20</p>
+                          <p class="title tileheading">GAMES</p>
+                        </div>
+                      </div>
+                      <div class="col-6"  style="color:#0A0A0A">
+                        <div class="card tile p-3">
+                          <p class="title tileheading">10</p>
+                          <p class="title tileheading">TRAININGS</p>
+                        </div>
+                      </div>
+                      <div class="col-6" style="color:#0A0A0A">
+                        <div class="card tile p-3">
+                          <p class="title tileheading">7</p>
+                          <p class="title tileheading">WINS</p>
+                        </div>
+                      </div>
+                      <div class="col-6"  style="color:#0A0A0A">
+                       <div class="card tile p-3">
+                         <p class="title tileheading">10</p>
+                          <p class="title tileheading">LOSSES</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div>
+  <div class="tab">
+    <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                   
+    <h1 class="title " style="margin-bottom: 10px;color: black" >EDIT PROFILE</h1>
+    <p style="margin: 0px;">
+      <label for="Name"><h4 class="float-left" style="color: black;font-weight: bolder;">NAME:</h4></label>
+      <input type="text" name="name" oninput="this.className = ''" /></p>
+      <p style="margin: 0px;"><label for="tname"><h4 class="float-left" style="color: black;font-weight: bolder;">TEAM:</h4></label>
+      <input type="text" name="name" oninput="this.className = ''" /></p>
+    <p style="margin: 0px;"><label for="email"><h4 class="float-left" style="color: black;font-weight: bolder;;">EMAIL:</h4></label> 
+      <input type="text" name="email" id="email" oninput="this.className = ''" /></p>
+  <p style="margin: 0px;"><label for="dob"><h4 class="float-left" style="color: black;font-weight: bolder;">DATE OF BIRTH:</h4></label>
+    <input type="text" id="dob" name="dob" oninput="this.className = ''"  onfocus="(this.type='date')"/></p>
+  </div>
+</p>
+</div>
+</div>
+  
+
+    <div class="float-right">
+
+      <button type="button" id="nextBtn" class="float-right action-button" style="" onclick="nextPrev(1)">Next</button>
+      <button type="button" id="prevBtn" class="float-right action-button" onclick="nextPrev(-1)">Back</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  
+</form>
+
+          </div>
+        </div>
+      </div>
+      
+      </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu" style="background-color: black">
+        <li class="adjustments-line text-center color-change">
+          <span class="color-label">LIGHT MODE</span>
+          <span class="badge light-badge mr-2"></span>
+          <span class="badge dark-badge ml-2"></span>
+          <span class="color-label">DARK MODE</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $('.fixed-plugin a').click(function(event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function() {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function() {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("nextBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+ 
+  return valid; // return the valid status
+}
+
+
+</script>
+
+
+</body>
+
+</html>

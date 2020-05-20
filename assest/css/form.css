@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+.action-button {
+	width: 100px;
+	background: #2F4F4F;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+.action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #000000;
+}
+#regForm {
+  background-color:white;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto; 
+  font-family: Raleway;
+  padding: 20px;
+  width: 50%;
+  min-width: 300px;
+  border-radius: 5px;
+ box-shadow :0.4em 0.4em 0.4em rgba(10,10,10,.5);
+ color:black;
+}
+
+h1,h2 {
+  text-align: center;  
+  
+}
+
+ 
+.input-field {
+  position: relative;
+  margin-top: 20px;
+}
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: black;
+  transition: 0.2s all;
+  cursor: text;
+  font-weight: bolder;
+  font-size: 100%;
+}
+input {
+  margin-bottom: 2%;
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid black;
+  box-shadow: none;
+  color: black;
+}
+
+input:focus,
+input:valid {
+  border-color: blue;
+  font-weight: bolder;
+}
+input:focus~label,
+input:valid~label {
+  font-size: 14px;
+  top: -20px;
+  color: blue;
+}
+
+input.invalid {
+  
+  border-bottom: 2px solid red;
+}
+label.invalid{
+  color: red
+}
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+.fs-title {
+	font-family: Raleway;
+	font-size: 150%;
+	color: black;
+	margin-bottom: 10px;
+}
+button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+#msg{
+margin-top:0px;
+color: red;
+font-weight: bolder;
+margin-bottom: 2px;
+}
+body{
+	height:100%;
+	min-height:100%;
+	margin:0;
+	
+}
+.heading{
+	font-size:20px;
+	text-align:left;
+	color:#FBC403;
+	font-family: Raleway;
+}
+
+.navbar{
+	height: 10%;
+	width: 100%;
+}
+.navbar ul{
+	padding:0;
+	margin:0;
+	height:100%;
+	
+}
+
+.navbar li{
+	list-style:none;
+	display : inline;
+	height:100%;
+	vertical-align:middle;
+}
+
+navbar.a{
+	margin-right:0;
+}
+.logo{
+	width: 7em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.remember{
+  margin-top: 0;
+  width: 15px;
+height: 15px;
+}
+
+
+  #regForm {
+    background-color:white;
+  margin-top: 6%;
+  margin-right: auto;
+  margin-left: auto; 
+  font-family: Raleway;
+  padding: 20px;
+ width: 30%;
+  border-radius: 5px;
+ box-shadow :0.4em 0.4em 0.4em rgba(10,10,10,.5);
+ color:black;
+  }
+
+.heading2{
+  font-size: 90%;
+  font-weight: bolder;
+}

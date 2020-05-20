@@ -33,7 +33,7 @@ def login(request):
             return redirect('/')
         
     else:
-        return render(request,'blog.html')
+        return render(request,'index.html')
 
 def register(request):
     if request.method == 'POST':
@@ -57,7 +57,7 @@ def register(request):
         else:
             return redirect('register')
     else:
-        return render(request,'bregister.html')
+        return render(request,'reg.html')
 
 def validate_username(request):
     username = request.GET.get('username', None)

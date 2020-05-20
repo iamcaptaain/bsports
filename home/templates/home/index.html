@@ -1,13 +1,138 @@
-<title>Page</title>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if user.is_authenticated %}
-    <h1>{{user.email}}</h1>
-    <h2>{{user.username}}</h2>
-    <h2>{{user.first_name}}</h2>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel = "stylesheet" type = "text/css" href = "assets/css/form.css" />
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style type="text/css">
 
-    <h2>here</h2>
+  html{
+  height:100%;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/img/ball3.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+   overflow-x: hidden;
+    overflow-y: hidden;
+}
 
-    <a href="/out_view">For live click here</a>
-{% else %}
-    <h1>You hacked please go<a href="/">here</a></h1>
-{% endif %}
+</style>
+</head>
+<body >
+<div style="width: 100%;height: 10px;position: relative;">
+  <a href="RegistrationPg.html" style="position:absolute;top:1%;right: 1%;text-decoration: none;color: white;font-weight: bolder;"><span class="heading2"><i class="fas fa-user-plus"></i>   REGISTER</span></a></p>
+</div>
+<form id="regForm" method = "post" action="WelcomeScreen.html">
+  <!-- One "tab" for each step in the form: -->
+  
+  <div class="login page" id="login">
+
+  <img src = "assets/img/backmarker_logo.png" class="logo" align="middle">
+  <h1 class="fs-title"><b>SIGN IN</b></h1>
+  <div class="input-field">
+    <input type="text" name="username" id="username" required oninput="this.className = ''"  />
+    <label for="username">USERNAME :</label>
+  </div>
+  <div class="input-field" id="msg1">
+    <input type="password" name="pass" id="pass" required oninput="this.className = ''"  />
+    <label for="password">PASSWORD :</label>
+  </div>
+  <div class="input-field" id="msg2" style="margin-top:0; ">
+    <input type="checkbox" class="remember" /><span class="heading2">Remember Me</span>
+  </div>
+  </div>
+  <div style="text-align: center;">
+      <button type="button" class="action-button" onclick="nextPrev()" style="display: block;margin: 5% auto;">LOGIN</button>
+      <a href="#" style="display: block;"><span class="heading2">FORGOT PASSWORD ?</span></a>
+  </div>
+</form>
+
+<script>
+var a,b;
+function nextPrev() {
+  var x = document.getElementsByClassName("page");
+  if (!validateForm()) return false;
+  document.getElementById("regForm").submit();
+  return false;
+  }
+ 
+
+function validateForm() {
+  var x, y, i, valid = true;
+  y = document.getElementsByTagName("input");
+  z = document.getElementsByTagName("label");
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
+      z[i].className += " invalid";
+      valid = false;
+    }
+   }  
+   for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value != "" && y[i].id == "username") {
+      if(y[i].value != "admin"){
+      if (a==1) {
+       var ele = document.getElementById("msg")
+        document.getElementById("login").removeChild(ele);
+        a = 0;
+      }
+      
+      y[i].className += "invalid";
+      z[i].className += " invalid";
+      var para = document.createElement("p");
+      var node = document.createTextNode("Invalid Username !");
+      para.appendChild(node);
+      para.id += "msg";
+      var element = document.getElementById("login");
+      element.insertBefore(para,document.getElementById("msg1"));
+      a = 1;
+      // and set the current valid status to false
+      valid = false;
+    } 
+    else{
+      if (a==1) { 
+     var ele = document.getElementById("msg")
+        document.getElementById("login").removeChild(ele);
+      a = 0;
+      }
+    }
+  }
+  if (y[i].value != "" && y[i].id == "pass") {
+      if(y[i].value != "admin"){
+      if (b==1) {
+       var element = document.getElementById("login");
+       element.removeChild(element.lastChild);
+        b = 0;
+      }
+      
+      y[i].className += "invalid";
+      z[i].className += " invalid";
+      var para = document.createElement("p");
+      var node = document.createTextNode("Invalid Password !");
+      para.appendChild(node);
+      para.id += "msg";
+      var element = document.getElementById("login");
+     element.insertBefore(para,document.getElementById("msg2"));
+      b = 1;
+      // and set the current valid status to false
+      valid = false;
+    } 
+    else{
+      if (a==1) { 
+      var element = document.getElementById("login");
+       element.removeChild(element.lastChild);
+      b = 0;
+      }
+    }
+  }
+  }
+  return valid;
+}
+
+
+</script>
+</body>
+</html>

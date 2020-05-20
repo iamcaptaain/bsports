@@ -1,0 +1,592 @@
+
+{% load static %}
+<!--
+=========================================================
+* * Black Dashboard - v1.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/black-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
+  <title>
+    Black Dashboard
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Nucleo Icons -->
+  <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="{% static 'css/black-dashboard.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{% static 'demo/demo.css' %}" rel="stylesheet" />
+  
+</head>
+
+<body class="">
+  <div class="wrapper "  id = "wrapper">
+  <div id="sidebar-wrapper" class="hover" onmouseenter = "expand(this)" onmouseleave = "contract(this)">
+        <div id="sidebar-header">
+		<div id="sidebar-header">
+            <h3></h3>
+        </div>
+        </div>
+        <ul class="sidebar-nav">
+			<li><a href="{% url 'welcome' %}"><span><i class="fa fa-home text-dark"></i></span><span>Home</span></a></li>
+            <li><a href="#" class = "active"><span><i class="fa fa-bar-chart text-dark "></i></span><span>Dashboard</span></a></li>
+            <li><a href="#"><span><i class="fas fa-calendar-alt text-dark"></i></span><span>Schedule</span></a></li>
+            <li><a href="#"><span><i class="fa fa-gear text-dark"></i></span><span>Settings</span></a></li>
+            <li><a href="#"><span><i class="fa fa-support text-dark"></i></span><span>Help</span></a></li>
+			
+        </ul>
+		<div id="sidebar-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+	
+	
+  
+	
+    <div class="main-panel">
+	
+	<!-- start footer-->
+	
+	<div class="footer-menu" id="myFooter">
+
+	<div class = "menu">
+		<a href = "{% url 'welcome' %}"><i class="fa fa-home text-dark"></i></a>
+		<a href = "#"><i class="fa fa-bar-chart active"></i></a>
+		<a href = "#"><i class="fas fa-calendar-alt text-dark"></i></a>
+		<a href = "#"><i class = "fa fa-gear text-dark"></i></a>
+		<a href = "#"><i class = "fa fa-support text-dark "></i></a>
+	</div>
+	<div class = "main-content">
+		<div class = "menu-content-item">
+			<a href = "#"><i class="fa fa-home text-dark"></i>abc</a>
+			<a href = "#"><i class="fa fa-bar-chart text-dark"></i>abc</a>
+			<a href = "#"><i class="fas fa-calendar-alt text-dark"></i>abc</a>
+		</div>
+		<div class = "menu-content-item">
+			<a href = "#"><i class="fa fa-home text-dark"></i>abc</a>
+			<a href = "#"><i class="fa fa-bar-chart text-dark"></i>abc</a>
+			<a href = "#"><i class="fas fa-calendar-alt text-dark"></i>abc</a>
+		</div>
+	</div>
+</div>
+	
+	
+	
+	
+	
+	<!-- end footer -->
+	
+	<!-- start navbar -->
+		<nav class="navbar">
+			<ul>
+				<li>
+					<div class="header-logo">
+						<div class="main-logo">
+						  <div class="b-logo"><img src="{% static 'img/backmarker_logo.png' %}" alt="">
+						  <span class = "heading pl-lg-2">A.T.O.M</span>
+						  </div>
+						</div>
+					  </div>
+				</li>
+			</ul>
+			<ul>
+		
+				<li class="dropdown show-dropdown nav-item"><i class="tim-icons icon-components text-warning" data-toggle="dropdown"><a href = "#"></a></i>
+				
+					<ul class="dropdown-menu">
+        
+						<li class="adjustments-line color-change">
+						  <a href = "#"><span class="badge light-badge"></span><span class="color-label">LIGHT MODE</span></a>	
+						</li>
+						<li class="adjustments-line  color-change">
+						  <a href = "#"><span class="badge dark-badge"></span><span class="color-label">DARK MODE</span></a>
+						</li>
+						<li class="adjustments-line color-change">
+						  <a href = "#"><span class="badge badge-primary hover"></span><span class="color-label">SIDEBAR HOVER</span></a>
+						  </li>
+						 <li class="adjustments-line color-change">
+						  <a href = "#"><span class="badge badge-success click"></span><span class="color-label">SIDEBAR CLICK</span></a>
+						</li>
+					</ul>
+				</li>
+
+				
+				
+			</ul>
+		</nav>
+      
+	 
+      
+      <!-- End Navbar -->
+      <div class="content">
+	  
+	  <div class="row">
+			<div class="col-lg-2 col-md-4">
+				<div class="card " onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+					<div class="card-body">
+						<div><i class="fa fa-angle-double-right icons  text-primary"></i></div>
+						<div class = "number card-title">10km/hr</div>
+						<div class = "name card-title">Speed</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4">
+				<div class="card" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+					<div class="card-body">
+							<div><i class=" fas fa-forward icons text-success"></i></div>
+						<div class = "number card-title">8km/hr</div>
+						<div class = "name card-title">Average Speed</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4">
+				<div class="card" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+					<div class="card-body">
+						<div><i class="tim-icons icon-square-pin icons text-info"></i></div>
+						<div class = "number card-title">45km</div>
+						<div class = "name card-title">Distance</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4">
+				<div class="card" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+					<div class="card-body">
+						<div><i class="tim-icons icon-user-run icons text-warning"></i></div>
+						<div class = "number card-title">2km</div>
+						<div class = "name card-title">Total Sprint</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4">
+				<div class="card" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+					<div class="card-body">
+						<div><i class="tim-icons icon-user-run icons text-danger"></i></div>
+						<div class = "number card-title">1km</div>
+						<div class = "name card-title">Best Sprint</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4">
+				<div class="card" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+					<div class="card-body">
+						<div><i class="tim-icons icon-user-run icons text-danger"></i></div>
+						<div class = "number card-title">1km</div>
+						<div class = "name card-title">Best Sprint</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class = "row">
+			<div class = "col-lg-8">
+				<div class = "row">
+				
+					
+					<div class = "col-md-8">
+						<div class="card card-chart" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+						  <div class="card-header">
+							<h3 class="card-title"><b>5 min Breakdown</b></h3>
+						  </div>
+						  <div class="card-body">
+							<div class="chart-area">
+							  <canvas id="FiveMinuteBreakdown"></canvas>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<div class = "col-md-4">
+						<div class="card card-chart" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+						  <div class="card-header ">
+						  <h3 class="card-title"><b>Area Circular Chart</b></h3>
+						  </div>
+						  <div class="card-body">
+							<div class="chart-area">
+							  <canvas id=""></canvas>
+							</div>
+						  </div>
+						</div>
+					</div>
+					
+					
+				</div>
+				<div class = "row">
+					
+					<div class = "col-6">
+						<div class="card card-chart" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+						  <div class="card-header ">
+						  <h3 class="card-title"><b>Intensity</b></h3>
+						  </div>
+						  <div class="card-body">
+							<div class="chart-area">
+							  <canvas id="Intensity"></canvas>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<div class = "col-6">
+						<div class="card card-chart" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+							<div class="card-header">
+								<h3 class="card-title"><b>Heart Rate Zone</b></h3>
+							</div>
+							<div class="card-body">
+								<div class="chart-area">
+									<canvas id="heartratemonitor"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class = "col-lg-4">
+				<div class="card card-chart" onmousedown = "popup(this)" onmouseup = "popdown(this)" >
+				  <div class="card-header">
+					<h3 class="card-title"><b>Heat Map</b></h3>
+				  </div>
+				  <div class="card-body ">
+					<div class="chart-area">
+					  <canvas id="CountryChart"></canvas>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+        
+		
+        
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="{% static 'assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="{% static 'assets/js/plugins/chartjs.min.js' %}"></script>
+  <!--  Notifications Plugin    -->
+  <script src="{% static 'assets/js/plugins/bootstrap-notify.js' %}"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{% static 'assets/js/black-dashboard.min.js' %}"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{% static 'assets/demo/demo.js' %}"></script>
+  <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'js/swiped-events.js' %}"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('#sidebar-wrapper');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.fixed-plugin a').click(function(event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data', new_color);
+          }
+		  if ($navbar.length != 0) {
+            $navbar.attr('data', new_color);
+          }
+
+          if ($main_panel.length != 0) {
+            $main_panel.attr('data', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data', new_color);
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function() {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function() {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+
+<script>
+var lock1 = 0, lock2 = 1;
+$(document).ready(function() {
+	$('.badge-primary').click(function() {
+		if($( "#sidebar-wrapper" ).hasClass( "click" )){
+       $("#sidebar-wrapper").removeClass("click").addClass("hover");
+	   lock1 = 0
+		lock2 = 1;
+		}
+		else {
+			$("#sidebar-wrapper").addClass("hover"); 
+			lock1 = 0;
+			lock2 = 1;
+		}
+        });
+	$('.badge-success').click(function() {
+         if($( "#sidebar-wrapper" ).hasClass( "hover" )){
+       $("#sidebar-wrapper").removeClass("hover").addClass("click"); 
+	   lock1 = 1
+		lock2 = 0;
+		}
+		else {
+			$("#sidebar-wrapper").addClass("click"); 
+			lock1 = 1
+			lock2 = 0;
+		}
+    });
+     
+	 
+});
+</script>
+
+<script>
+	var x,y;
+		function expand(x){
+			if(lock1 != 1){
+				x.classList.add("visible");
+				document.getElementById("wrapper").classList.add("visible");
+			}
+			
+			
+			
+		}
+
+		function contract(x){
+			if(lock1 != 1){
+				x.classList.remove("visible");
+				document.getElementById("wrapper").classList.remove("visible");
+			}
+			
+		}
+	
+</script>
+<script>
+	
+	$(document).ready(function() {
+ 
+     $('#sidebar-btn').click(function() {
+	 if(lock2 != 1){
+		$('#sidebar-wrapper').toggleClass('visible');
+		$('#wrapper').toggleClass('visible');
+	 }
+
+       
+     });  
+});
+</script>
+<script>
+	var x,y,z,i;
+	function popup(x){
+		if (window.matchMedia('(min-width: 800px)').matches) {
+		
+		y = document.getElementsByClassName("card");
+		for(i=0; i< y.length ; i++){
+			
+				y[i].style.filter = "blur(4px)";
+			
+			
+		}
+		document.getElementById("sidebar-wrapper").style.filter = "blur(4px)";
+		document.getElementsByClassName("navbar")[0].style.filter = "blur(4px)";
+		x.style.filter = "blur(0)";
+		x.style.background = "black";
+		x.style.boxShadow = "10px 10px 10px grey";
+		z = x.getElementsByClassName("card-title");
+		for(i=0;i<z.length;i++){
+			z[i].style.color = "white";
+		}
+		}
+	}
+	function popdown(x){
+		if (window.matchMedia('(min-width: 800px)').matches) {
+		y = document.getElementsByClassName("card");
+		for(i=0; i< y.length ; i++){
+			
+				y[i].style.filter = "blur(0)";
+			
+			
+		}
+		document.getElementById("sidebar-wrapper").style.filter = "blur(0)";
+		document.getElementsByClassName("navbar")[0].style.filter = "blur(0)";
+		x.style.background = "";
+		x.style.boxShadow = "";
+		z = x.getElementsByClassName("card-title");
+		for(i=0;i<z.length;i++){
+			z[i].style.color = "";
+		}
+	}	
+		
+	}
+	
+</script>
+<script>
+
+            window.onload = function() {
+
+                /*document.addEventListener('swiped-left', function(e) {
+                    console.log(e.type);
+                    console.log(e.target);
+                    e.target.innerHTML = e.type;
+                });
+
+                document.addEventListener('swiped-right', function(e) {
+                    console.log(e.type);
+                    console.log(e.target);
+                    e.target.innerHTML = e.type;
+                });
+				*/
+                document.addEventListener('swiped-up', function(e) {
+						if(e.target.classList.contains("menu")){
+						
+							document.getElementsByClassName("main-content")[0].classList.add("visible");
+							}
+						else if(e.target.parentNode.classList.contains("menu")){
+							document.getElementsByClassName("main-content")[0].classList.add("visible");
+							}
+						else if(e.target.parentNode.parentNode.classList.contains("menu")){
+						
+							document.getElementsByClassName("main-content")[0].classList.add("visible");
+							}
+						else{}
+                    
+                });
+
+                document.addEventListener('swiped-down', function(e) {
+					if(e.target.classList.contains("menu")){
+						
+							document.getElementsByClassName("main-content")[0].classList.remove("visible");
+							}
+						else if(e.target.parentNode.classList.contains("menu")){
+						document.getElementsByClassName("main-content")[0].classList.remove("visible");
+							}
+						else if(e.target.parentNode.parentNode.classList.contains("menu")){
+						
+						document.getElementsByClassName("main-content")[0].classList.remove("visible");
+							}
+						else{}
+					
+                });
+
+            }
+        </script>
+
+</body>
+
+</html>
